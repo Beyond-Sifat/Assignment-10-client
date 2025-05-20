@@ -21,9 +21,12 @@ const Navbar = () => {
         <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/'>Home</NavLink></li>
         <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/login'>Login</NavLink></li>
         <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/register'>Register</NavLink></li>
-        {user ? <>
-            <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/profile'>My Profile</NavLink></li>
-        </> : <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/profile'>Profile</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/register'>All Plants</NavLink></li>
+
+        {user && <>
+            <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/profile'>Add Plant</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/profile'>My Plants</NavLink></li>
+        </>
         }
 
 
@@ -32,7 +35,7 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100 bg-gradient-to-r from-blue-500 via-sky-500 to-indigo-400 shadow-sm text-white">
             <div className="navbar-start">
-                <a className="btn btn-ghost text-xl">CareerZ</a>
+                <a className="btn btn-ghost text-xl">HappyPlants</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
