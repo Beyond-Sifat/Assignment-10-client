@@ -10,19 +10,32 @@ import {
 } from "react-router";
 import Root from './Layouts/Root.jsx';
 import Home from './components/Home.jsx';
+import AuthProvider from './Context/AuthProvider.jsx';
+import Login from './Pages/Login.jsx';
+import Register from './Pages/Register.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
     children: [
-      {index: true, Component: Home},
+      { index: true, Component: Home },
+      {
+        path: '/login',
+        Component: Login
+      },
+      {
+        path: '/register',
+        Component: Register
+      }
     ]
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </StrictMode>,
 )

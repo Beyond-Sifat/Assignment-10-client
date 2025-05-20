@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Home = () => {
+const PrivateRoutes = () => {
     return (
         <div>
-            ftyghfdhgd
+            
         </div>
     );
 };
 
-export default Home;
+export default PrivateRoutes;
