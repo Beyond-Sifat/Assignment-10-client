@@ -44,7 +44,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                    <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
@@ -52,15 +52,30 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2  bg-gradient-to-r from-blue-500 via-sky-500 to-indigo-400 shadow-sm border-dotted border-2 border-black">
-                        {/* {
-                            user && <span className='mx-4'>{user.email}</span>
-                        } */}
+                        {
+                            user &&
+                            <div className="avatar-group -space-x-6">
+                            <div className="avatar">
+                                <div className="w-8 md:w-12">
+                                    <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+                                </div>
+                            </div>
+                        </div>
+                            //  <span className='mx-4'>{user.email}</span>
+                        }
                         {links}
                     </ul>
                 </div>
                 {user ?
                     <>
-                        <span className='mx-4 max-md:hidden'>{user.email}</span>
+                        <div className="max-sm:hidden avatar-group  mr-2">
+                            <div className="avatar">
+                                <div className="w-11">
+                                    <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+                                </div>
+                            </div>
+                        </div>
+                        {/* <span className='mx-4 max-md:hidden'>{user.email}</span> */}
                         <a onClick={handleLogOut} className="">Sign out</a>
                     </> :
                     <Link to='/login'>Login</Link>}

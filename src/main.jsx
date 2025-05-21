@@ -16,13 +16,28 @@ import Register from './Pages/Register.jsx';
 import AllPlants from './Pages/AllPlants.jsx';
 import AddPlant from './Pages/AddPlant.jsx';
 import MyPlants from './Pages/MyPlants.jsx';
+import PlantDetails from './Pages/PlantDetails.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
     children: [
-      { index: true, Component: Home },
+      {
+        index: true,
+        loader: ()=> fetch('http://localhost:3000/plants'),
+        Component: Home
+      },
+      {
+        path: '/all-plants',
+        loader: () => fetch('http://localhost:3000/plants'),
+        Component: AllPlants
+      },
+      {
+        path: '/plants-details/:id',
+        loader: ({params})=> fetch(`http://localhost:3000/plants/${params.id}`),
+        Component: PlantDetails
+      },
       {
         path: '/login',
         Component: Login
@@ -30,10 +45,6 @@ const router = createBrowserRouter([
       {
         path: '/register',
         Component: Register
-      },
-      {
-        path: '/all-plants',
-        Component: AllPlants
       },
       {
         path: '/add-plant',

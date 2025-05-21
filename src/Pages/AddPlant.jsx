@@ -41,11 +41,11 @@ const AddPlant = () => {
 
                         <fieldset >
                             <label className="label">Plant Name</label>
-                            <input type="text" className="input w-full" placeholder="Name of plant" />
+                            <input name='name' type="text" className="input w-full" placeholder="Name of plant" />
                         </fieldset>
                         <fieldset >
                             <label className="label">Image</label>
-                            <input type="url" className="input w-full" placeholder="URL" />
+                            <input name='image' type="url" className="input w-full" placeholder="URL" />
                         </fieldset>
 
 
