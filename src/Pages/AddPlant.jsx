@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import { AuthContext } from '../Context/AuthContext';
+import { toast } from 'react-toastify';
 
 const AddPlant = () => {
     const { user } = use(AuthContext)
@@ -21,6 +22,9 @@ const AddPlant = () => {
         })
         .then(res =>res.json())
         .then(data => {
+            if(data.insertedId){
+                toast.success('plant added successfully')
+            }
             console.log('after add', data);
         })
     }
