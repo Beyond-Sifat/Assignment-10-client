@@ -21,11 +21,11 @@ const Navbar = () => {
         <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/'>Home</NavLink></li>
         <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/login'>Login</NavLink></li>
         <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/register'>Register</NavLink></li>
-        <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/register'>All Plants</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/all-plants'>All Plants</NavLink></li>
 
         {user && <>
-            <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/profile'>Add Plant</NavLink></li>
-            <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/profile'>My Plants</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/add-plant'>Add Plant</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "" : ""} to='/my-plants'>My Plants</NavLink></li>
         </>
         }
 
