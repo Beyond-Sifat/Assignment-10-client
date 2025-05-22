@@ -6,7 +6,7 @@ import { AuthContext } from '../Context/AuthContext';
 const Register = () => {
     const [error, setError] = useState('');
 
-    const { createUser } = use(AuthContext)
+    const { createUser, updateUser,setUser } = use(AuthContext)
     const navigate = useNavigate();
 
 
@@ -33,9 +33,15 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
+                const user = result.user;
                 console.log(result)
                 navigate('/') 
                 toast.success("successfully register")
+                updateUser({displayName: name, photoURL:photoURL}).then(() =>{
+                    setUser({...user, displayName: name, photoURL:photoURL})
+                }).catch(error =>{
+                    console.log(error)
+                })
             })
             .catch(error => {
                 console.log(error)

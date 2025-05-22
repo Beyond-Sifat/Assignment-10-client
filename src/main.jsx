@@ -17,6 +17,7 @@ import AllPlants from './Pages/AllPlants.jsx';
 import AddPlant from './Pages/AddPlant.jsx';
 import MyPlants from './Pages/MyPlants.jsx';
 import PlantDetails from './Pages/PlantDetails.jsx';
+import PrivateRoutes from './Route/PrivateRoutes.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: ()=> fetch('http://localhost:3000/plants'),
+        loader: () => fetch('http://localhost:3000/plants'),
         Component: Home
       },
       {
@@ -35,8 +36,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/plants-details/:id',
-        loader: ({params})=> fetch(`http://localhost:3000/plants/${params.id}`),
-        Component: PlantDetails
+        loader: ({ params }) => fetch(`http://localhost:3000/plants/${params.id}`),
+        // Component: PlantDetails,
+        element: <PrivateRoutes><PlantDetails></PlantDetails></PrivateRoutes>
       },
       {
         path: '/login',
@@ -48,10 +50,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/add-plant',
-        Component: AddPlant
+        // Component: AddPlant,
+        element: <PrivateRoutes><AddPlant></AddPlant></PrivateRoutes>
       },
       {
         path: '/my-plants',
+        loader: () => fetch('http://localhost:3000/plants'),
         Component: MyPlants
       }
     ]

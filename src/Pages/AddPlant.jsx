@@ -27,6 +27,27 @@ const AddPlant = () => {
             } 
             console.log('after add', data);
         })
+
+
+
+        
+        fetch('http://localhost:3000/userPlants',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newPlantData)
+        })
+        .then(res =>res.json())
+        .then(data => {
+            if(data.insertedId){
+                toast.success('plant added successfully')
+            } 
+            console.log('after add', data);
+        })
+
+
+
     }
     return (
         <div className='p-20'>
@@ -88,7 +109,7 @@ const AddPlant = () => {
 
                         <fieldset>
                             <label className="label">User Name</label>
-                            <input name='userName' type="text" className="input w-full" placeholder="Name" />
+                            <input readOnly value={user?.displayName || ""}  name='userName' type="text" className="input w-full" placeholder="Name" />
                         </fieldset>
                         <fieldset >
                             <label className="label">User Email</label>

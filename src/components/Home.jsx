@@ -4,9 +4,10 @@ import { useLoaderData } from 'react-router';
 
 const Home = () => {
     const data = useLoaderData();
+    const six = [...data].reverse().slice(0, 6);
     return (
         <div>
-           <NewPlants newPlants = {data}></NewPlants>
+           <NewPlants newPlants = {six}></NewPlants>
         </div>
     );
 };
