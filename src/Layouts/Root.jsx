@@ -9,7 +9,7 @@ const Root = () => {
         <div>
             <ToastContainer position='top-right' autoClose={2500}></ToastContainer>
             <Navbar></Navbar>
-            <div className='max-w-7xl mx-auto'>
+            <div className='max-w-7xl mx-auto min-h-[calc(100vh-258.98px)]'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

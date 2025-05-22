@@ -18,11 +18,13 @@ import AddPlant from './Pages/AddPlant.jsx';
 import MyPlants from './Pages/MyPlants.jsx';
 import PlantDetails from './Pages/PlantDetails.jsx';
 import PrivateRoutes from './Route/PrivateRoutes.jsx';
+import ErrorPage from './Pages/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement: <ErrorPage></ErrorPage> ,
     children: [
       {
         index: true,
