@@ -16,7 +16,8 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const name = form.name.value;
-        console.log(email, password, name);
+        const photoURL = form.photoURL.value
+        console.log(email, password, name,photoURL);
 
 
         if (!/[A-Z]/.test(password)) {
@@ -52,7 +53,7 @@ const Register = () => {
                     <label className="label">Email</label>
                     <input type="email" className="input" name='email' placeholder="Email" />
                     <label className="label">PhotoURL</label>
-                    <input type='text' className="input" name='photoURL' placeholder="photoURL" />
+                    <input type='url' className="input" name='photoURL' placeholder="photoURL" />
                     <label className="label">Password</label>
                     <input type="password" className="input" name='password' placeholder="Password" />
                     <div><a className="link link-hover">Forgot password?</a></div>

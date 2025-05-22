@@ -24,7 +24,7 @@ const AddPlant = () => {
         .then(data => {
             if(data.insertedId){
                 toast.success('plant added successfully')
-            }
+            } 
             console.log('after add', data);
         })
     }

@@ -5,7 +5,7 @@ import { AuthContext } from '../Context/AuthContext';
 const Navbar = () => {
 
     const { user, logOutUser } = use(AuthContext)
-    console.log(user)
+    // console.log(user)
 
 
     const handleLogOut = () => {
@@ -57,7 +57,7 @@ const Navbar = () => {
                             <div className="avatar-group -space-x-6">
                             <div className="avatar">
                                 <div className="w-8 md:w-12">
-                                    <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+                                    <img src={user.photoURL} />
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@ const Navbar = () => {
                         <div className="max-sm:hidden avatar-group  mr-2">
                             <div className="avatar">
                                 <div className="w-11">
-                                    <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+                                    <img src={user.photoURL} />
                                 </div>
                             </div>
                         </div>
