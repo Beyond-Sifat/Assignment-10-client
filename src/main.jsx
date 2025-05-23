@@ -19,6 +19,7 @@ import MyPlants from './Pages/MyPlants.jsx';
 import PlantDetails from './Pages/PlantDetails.jsx';
 import PrivateRoutes from './Route/PrivateRoutes.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
+import UpdatePlants from './Pages/UpdatePlants.jsx';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,11 @@ const router = createBrowserRouter([
         path: '/my-plants',
         // Component: MyPlants
         element: <PrivateRoutes><MyPlants></MyPlants></PrivateRoutes>
+      },
+      {
+        path: '/update-plants',
+        // Component: MyPlants
+        element: <PrivateRoutes><UpdatePlants></UpdatePlants></PrivateRoutes>
       }
     ]
   },
