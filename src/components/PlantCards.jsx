@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const PlantCards = ({plant}) => {
-    const {image}= plant
+    const {image,name}= plant
     return (
         <div className="card bg-base-100 w-96 shadow-sm">
             <figure className="w-full h-64 overflow-hidden rounded-xl">
@@ -11,8 +11,10 @@ const PlantCards = ({plant}) => {
                     alt="Plants"
                     className="w-full h-full object-cover" />
             </figure>
+             <p className='text-lg font-bold mt-2'>{name}</p>
             <div className="card-body items-center text-center">
                 <div className="card-actions">
+                   
                      <Link className="btn bg-green-500 text-white" to={`/plants-details/${plant._id}`}>View Details</Link>
                 </div>
             </div>

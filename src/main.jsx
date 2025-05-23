@@ -62,8 +62,8 @@ const router = createBrowserRouter([
         element: <PrivateRoutes><MyPlants></MyPlants></PrivateRoutes>
       },
       {
-        path: '/update-plants',
-        // Component: MyPlants
+        path: '/update-plants/:id',
+        loader:({params}) => fetch(`http://localhost:3000/plants/${params.id}`),
         element: <PrivateRoutes><UpdatePlants></UpdatePlants></PrivateRoutes>
       }
     ]

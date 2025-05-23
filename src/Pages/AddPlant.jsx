@@ -29,25 +29,6 @@ const AddPlant = () => {
         })
 
 
-
-
-        // fetch('http://localhost:3000/userPlants',{
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(newPlantData)
-        // })
-        // .then(res =>res.json())
-        // .then(data => {
-        //     if(data.insertedId){
-        //         toast.success('plant added successfully')
-        //     } 
-        //     console.log('after add', data);
-        // })
-
-
-
     }
     return (
         <div className='p-20'>

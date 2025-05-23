@@ -3,6 +3,7 @@ import { AuthContext } from '../Context/AuthContext';
 import { MdDelete } from 'react-icons/md';
 import { FiEdit3 } from 'react-icons/fi';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router';
 
 
 const MyPlants = () => {
@@ -59,7 +60,15 @@ const MyPlants = () => {
             <div className='my-10'>
                 <h2 className='text-3xl text-center'>My Plants</h2>
             </div>
+           
             <div className='text-center'>
+               {
+                myPlants.length === 0 ? (
+                    <div className='p-20 rounded-4xl bg-gray-300'>
+                        <p className="text-xl text-gray-500 my-10">You haven't added any plants yet.</p>
+                    </div>
+                 ) : (
+
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center'>
                     {
                         myPlants.map(plant => (
@@ -67,14 +76,21 @@ const MyPlants = () => {
                                 <img src={plant.image} alt={plant.name} className='w-full h-40 object-cover rounded' />
                                 <h3 className='text-lg font-bold mt-2'>{plant.name}</h3>
                                 <p className='text-sm text-gray-500'>{plant.category}</p>
+                                <div>
+                                    <p className='text-sm text-gray-500'>{plant.wateringFrequency}</p>
+                                    <p className='text-sm text-gray-500'>{plant.careLevel}</p>
+                                    <p className='text-sm text-gray-500'>{plant.healthStatus}</p>
+                                </div>
                                 <div className='mt-2 flex gap-2 justify-center'>
-                                    <button className='btn btn-sm bg-yellow-500 text-white'><FiEdit3 /></button>
+                                    <Link to={`/update-plants/${plant._id}`}>
+                                        <button className='btn btn-sm bg-yellow-500 text-white'><FiEdit3 /></button>
+                                    </Link>
                                     <button onClick={() => handleDelete(plant._id)} className='btn btn-sm bg-red-500 text-white'><MdDelete /></button>
                                 </div>
                             </div>
-                        ))
-                    }
+                        ))}
                 </div>
+                 )}
             </div>
 
         </div>
