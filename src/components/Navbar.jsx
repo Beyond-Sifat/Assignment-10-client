@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
+import { Tooltip } from 'react-tooltip';
 
 const Navbar = () => {
 
@@ -55,12 +56,13 @@ const Navbar = () => {
                         {
                             user &&
                             <div className="avatar-group -space-x-6">
-                            <div className="avatar">
-                                <div className="w-8 md:w-12">
-                                    <img src={user.photoURL} />
+                                <div className="avatar">
+                                    <div className="w-8 md:w-12">
+                                        <img data-tooltip-id='my-tooltip' src={user.photoURL} />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
                             //  <span className='mx-4'>{user.email}</span>
                         }
                         {links}
@@ -71,10 +73,13 @@ const Navbar = () => {
                         <div className="max-sm:hidden avatar-group  mr-2">
                             <div className="avatar">
                                 <div className="w-11">
-                                    <img src={user.photoURL} />
+                                    <img data-tooltip-id='my-tooltip' src={user.photoURL} />
                                 </div>
                             </div>
                         </div>
+                        <Tooltip id='my-tooltip'>
+                            <p><small>{user.email}</small></p>
+                        </Tooltip>
                         {/* <span className='mx-4 max-md:hidden'>{user.email}</span> */}
                         <a onClick={handleLogOut} className="">Sign out</a>
                     </> :
