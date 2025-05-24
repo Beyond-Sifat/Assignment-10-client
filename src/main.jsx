@@ -29,17 +29,17 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch('https://assignment-10-server-ecru-one.vercel.app/plants'),
+        loader: () => fetch('https://assignment-10-server-sifats-projects-538560cb.vercel.app/plants'),
         Component: Home
       },
       {
         path: '/all-plants',
-        loader: () => fetch('https://assignment-10-server-ecru-one.vercel.app/plants'),
+        loader: () => fetch('https://assignment-10-server-sifats-projects-538560cb.vercel.app/plants'),
         Component: AllPlants
       },
       {
         path: '/plants-details/:id',
-        loader: ({ params }) => fetch(`https://assignment-10-server-ecru-one.vercel.app/plants/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment-10-server-sifats-projects-538560cb.vercel.app/plants/${params.id}`),
         // Component: PlantDetails,
         element: <PrivateRoutes><PlantDetails></PlantDetails></PrivateRoutes>
       },
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/update-plants/:id',
-        loader: ({ params }) => fetch(`https://assignment-10-server-ecru-one.vercel.app/plants/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment-10-server-sifats-projects-538560cb.vercel.app/plants/${params.id}`),
         element: <PrivateRoutes><UpdatePlants></UpdatePlants></PrivateRoutes>
       }
     ]

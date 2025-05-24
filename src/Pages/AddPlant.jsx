@@ -13,7 +13,7 @@ const AddPlant = () => {
         const newPlantData = Object.fromEntries(formData.entries());
         console.log(newPlantData);
 
-        fetch('https://assignment-10-server-ecru-one.vercel.app/plants',{
+        fetch('https://assignment-10-server-sifats-projects-538560cb.vercel.app/plants',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

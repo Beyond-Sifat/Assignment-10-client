@@ -36,7 +36,7 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100 bg-gradient-to-r from-blue-500 via-sky-500 to-indigo-400 shadow-sm text-white">
             <div className="navbar-start">
-                <a className="btn btn-ghost text-xl">HappyPlants</a>
+                <a className="btn btn-ghost text-xl">HappyPlant</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
