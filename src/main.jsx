@@ -25,21 +25,21 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    errorElement: <ErrorPage></ErrorPage> ,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
-        loader: () => fetch('http://localhost:3000/plants'),
+        loader: () => fetch('https://assignment-10-server-ecru-one.vercel.app/plants'),
         Component: Home
       },
       {
         path: '/all-plants',
-        loader: () => fetch('http://localhost:3000/plants'),
+        loader: () => fetch('https://assignment-10-server-ecru-one.vercel.app/plants'),
         Component: AllPlants
       },
       {
         path: '/plants-details/:id',
-        loader: ({ params }) => fetch(`http://localhost:3000/plants/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment-10-server-ecru-one.vercel.app/plants/${params.id}`),
         // Component: PlantDetails,
         element: <PrivateRoutes><PlantDetails></PlantDetails></PrivateRoutes>
       },
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/update-plants/:id',
-        loader:({params}) => fetch(`http://localhost:3000/plants/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment-10-server-ecru-one.vercel.app/plants/${params.id}`),
         element: <PrivateRoutes><UpdatePlants></UpdatePlants></PrivateRoutes>
       }
     ]

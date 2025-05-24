@@ -13,7 +13,7 @@ const UpdatePlants = () => {
         const updatePlantData = Object.fromEntries(formData.entries());
         console.log(updatePlantData);
 
-        fetch(`http://localhost:3000/plants/${_id}`, {
+        fetch(`https://assignment-10-server-ecru-one.vercel.app/plants/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

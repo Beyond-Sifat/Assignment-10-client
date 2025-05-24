@@ -25,7 +25,7 @@ const MyPlants = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:3000/plants/${_id}`, {
+                fetch(`https://assignment-10-server-ecru-one.vercel.app/plants/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -47,7 +47,7 @@ const MyPlants = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:3000/my-plants?email=${user.email}`)
+            fetch(`https://assignment-10-server-ecru-one.vercel.app/my-plants?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setMyPlants(data)
