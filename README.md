@@ -39,10 +39,8 @@ Live Demo
 
 - react
 - react-dom
-- react-router-dom
-- axios
+- react-router
 - firebase
-- @tanstack/react-query
 - tailwindcss
 - daisyui
 
