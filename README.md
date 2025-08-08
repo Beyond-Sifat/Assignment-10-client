@@ -1,4 +1,4 @@
-![Preview](./Pood.png)
+![Preview](./Plant.png)
 
 
 ## Project Overview
@@ -10,3 +10,62 @@ Live Demo
 [Live Site Link](https://assignment-10-a27cc.web.app)
 
 ---
+
+## 🛠️ Technologies Used
+
+- React
+- Firebase Authentication
+- Express.js
+- MongoDB
+- Tailwind CSS
+- React Router
+
+---
+
+## ✨ Core Features
+
+- 🔐 Firebase Authentication (Google and email/password)
+- 🌱 Add and view your own plants under **My Plants**
+- 🌐 Public routes like **Home** and **All Plants** show only default/public plants
+- 🔒 User-specific filtering: your plants are hidden from others
+- 🔄 Responsive design with Tailwind CSS
+- 🧪 Server-client separation with secure API routes
+
+---
+
+## 📦 Dependencies
+
+### Client:
+
+- react
+- react-dom
+- react-router-dom
+- axios
+- firebase
+- @tanstack/react-query
+- tailwindcss
+- daisyui
+
+### Server:
+
+- express
+- cors
+- mongoose
+- dotenv
+- nodemon (dev)
+
+
+---
+
+
+📚 Additional Resources
+[Firebase Documentation](https://firebase.google.com/docs)
+
+[MongoDB Documentation](https://www.mongodb.com/docs/)
+
+[React Router](https://reactrouter.com/)
+
+📬 Contact
+For questions or feedback, reach out:
+[LinkedIn](https://www.linkedin.com/in/syed-sifat2004/) 
+
