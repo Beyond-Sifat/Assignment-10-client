@@ -1,12 +1,55 @@
-# React + Vite
+![Preview](./)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Project Overview
+A responsive website that insure plants health by track it watering time, watering amount build with built with React, Firebase, and MongoDB
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Demo
 
-## Expanding the ESLint configuration
+[Live Site Link](https://happy-plants.web.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+- React
+- Firebase Authentication & Firestore
+- MongoDB (via backend API)
+- Express.js (backend API)
+- Tailwind CSS / DaisyUI (for styling)
+- React Router
+
+---
+
+## ✨ Core Features
+
+- User authentication with Firebase (email/password and Google sign-in)
+- Add, edit, delete plants with health and watering schedule
+- Responsive design for mobile and desktop
+- User-specific data privacy (users only see their own plants)
+- Efficient backend API for data storage and retrieval
+
+---
+
+## 📦 Dependencies
+
+- react
+- react-dom
+- react-router-dom
+- firebase
+- tailwindcss
+- daisyui
+- express (backend)
+- mongoose (backend)
+- dotenv (backend)
+- cors (backend)
+- nodemon (dev dependency backend)
+
+---
+
+📚 Additional Resources
+[Firebase Documentation](https://firebase.google.com/docs)
+
+[MongoDB Documentation](https://www.mongodb.com/docs/)
+
+[React Router](https://reactrouter.com/)
