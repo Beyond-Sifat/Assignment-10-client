@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "assignment-10-a27cc"
-  }
+  },
+  "targets": {
+    "assignment-10-a27cc": {
+      "hosting": {
+        "default": [
+          "assignment-10-a27cc"
+        ],
+        "happy-plants": [
+          "happy-plants"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
